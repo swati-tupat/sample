@@ -9,6 +9,9 @@ ${browser}  chrome
 Google
     Open Browser   ${url}       ${browser}
     Sleep   8
-    Close Browser
+    close
 
 *** Keywords ***
+close
+    Close Browser
+
