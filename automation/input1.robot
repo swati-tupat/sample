@@ -2,15 +2,18 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${url}  https://www.google.com/
+${url}  https://facebook.com/
 ${browser}  chrome
 
 *** Test Cases ***
 inputbox
     open browser    ${url}  ${browser}
     maximize browser window
-    sleep    10
-    input text    xpath:/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input     Gmail
-    click button    xpath:/html/body/div[1]/div[3]/form/div[1]/div[1]/div[3]/center/input[1]
-
+    input text    id:email   8080064952
+    #click button  xpath:/html/body/div[1]/div[1]/div[2]/div/div[2]/div/div/div[2]/div/div[2]/div/div[1]/div/div/button
+    input text    id:pass     Sunita@0307
+    #input text    xpath://body/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/span[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]        genesis@123
+    click button    xpath:/html/body/div[1]/div[2]/div[1]/div/div/div/div[2]/div/div[1]/form/div[2]/button
+    sleep   10
+    close browser
 *** Keywords ***
